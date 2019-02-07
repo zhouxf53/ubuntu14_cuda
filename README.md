@@ -179,11 +179,11 @@ Create a new project, link it to the created virtual enviroment's python interpr
 
 [Nvidia driver 384 and cuda 9.0 on Ubuntu Desktop 16.04.4 LTS.](https://gist.github.com/zhanwenchen/e520767a409325d9961072f666815bb8)
 
-[Nvidia driver 384 and cuda 9.0 on Ubuntu Desktop 16.04.4 LTS.](https://github.com/williamFalcon/tensorflow-gpu-install-ubuntu-16.04)
+[Another Nvidia driver 384 and cuda 9.0 on Ubuntu Desktop 16.04.4 LTS.](https://github.com/williamFalcon/tensorflow-gpu-install-ubuntu-16.04)
 
 [Official CUDA installation guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 
-[Official CUDA installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html)
+[Official cuDNN installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html)
 
 [Chcek applicable tensorflow version](https://www.tensorflow.org/install/source#tested_source_configurations)
 

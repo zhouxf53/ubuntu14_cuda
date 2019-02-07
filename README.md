@@ -29,12 +29,12 @@ sudo rm -r cuda-X.Y
 (Optional) Reboot and attempt to login, should be able to log in but the resolution may be weird because you have no valid driver now
 
 ## 2. Install NVIDIA driver
-Logout and *go back to hard-terminal*, do not attempt to install it under GUI interface, you may need to add a additional repo by 
+Logout and **go back to hard-terminal**, do not attempt to install it under GUI interface. You may need to add an additional repo to find and install the driver 
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
 ```
-install Nvidia driver version 375 which is a transitional package for 410 at this time, directly using 384 or 410 is not working in my case
+Install Nvidia driver version 375 which is a transitional package for 410 at this time, directly using 384 or 410 is not working in my case
 ```
 sudo apt-get install nvidia-375
 ```
@@ -42,7 +42,7 @@ Reboot
 ```
 sudo reboot
 ```
-And attempt to login, should be able to login with no issue what so ever, check if NVIDIA System Management Interface gives any output, if it shows 410, it means the installation is correct. Note here the CUDA driver version is 10.0, but it is ok.
+And attempt to login, should be able to login with no issue whatsoever, check if NVIDIA System Management Interface gives any output, if it shows 410, it means the installation is correct. Note here the CUDA driver version is 10.0, but it is ok.
 ```
 nvidia-smi
 ```
@@ -50,7 +50,7 @@ Depends on your kernel version, you might have an output such as
 ```
 nvidia: version magic '4.4.0-116-generic SMP mod_unload modversions ' should be '4.4.0-116-generic SMP mod_unload modversions retpoline '
 ```
-This is a bug caused [[bug report](https://bugs.launchpad.net/ubuntu/+source/gcc-4.8/+bug/1750937)] by the kernel was installed without a sufficiently updated version of gcc, the solution is to update the gcc to a newer version.
+This is a bug caused [[bug report](https://bugs.launchpad.net/ubuntu/+source/gcc-4.8/+bug/1750937)] [[bug report 2](https://devtalk.nvidia.com/default/topic/1030325/linux/nvidia-driver-installation-nvidia-version-magic-4-4-0-116-generic-smp-mod_unload-modversions-should-be-4-4-0-116-generic-smp-mod_unload-modversions-retpoline-/)] by the kernel was installed without a sufficiently updated version of gcc, the solution is to update the gcc to a newer version.
 Check current gcc version, most likely to be 4.8.x
 ```
 gcc --version
@@ -119,7 +119,7 @@ Reload it
 source ~/.bashrc
 ```
 ## 7 Add CUDA library to lib_path
-Sometimes adding lib_path through editing ~/.bashrc could only affect terminal enviroment. In order for Pycharm to recognize the CUDA library, you need to edit a .conf file.
+Sometimes adding lib_path through editing ~/.bashrc could only affect terminal enviroment. In order for Pycharm to recognize the CUDA library, you need to edit a .conf file [[ref.](https://blog.sourced.tech/post/cuda_ldconfig/)].
 Create a file named as cuda.conf in anywhere convenient such as ~/Download directory, and adding the following content
 ```
 /usr/local/cuda/lib64
@@ -174,6 +174,12 @@ snap run pycharm-community
 ```
 Create a new project, link it to the created virtual enviroment's python interpreter, and test it with python code in step 10 to confirm.
 
-
+# Other valuable resources
+[Nvidia driver 375 and cuda 8.0 on Ubuntu Desktop 16.04.4 LTS.](https://medium.com/@vivek.yadav/deep-learning-setup-for-ubuntu-16-04-tensorflow-1-2-keras-opencv3-python3-cuda8-and-cudnn5-1-324438dd46f0)
+[Nvidia driver 384 and cuda 9.0 on Ubuntu Desktop 16.04.4 LTS.](https://gist.github.com/zhanwenchen/e520767a409325d9961072f666815bb8)
+[Nvidia driver 384 and cuda 9.0 on Ubuntu Desktop 16.04.4 LTS.](https://github.com/williamFalcon/tensorflow-gpu-install-ubuntu-16.04)
+[Official CUDA installation guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+[Official CUDA installation guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html)
+[Chcek applicable tensorflow version](https://www.tensorflow.org/install/source#tested_source_configurations)
 
 

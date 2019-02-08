@@ -65,10 +65,12 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /u
 Check gcc version agian, reboot, and attempt to log in to GUI.
 
 ## 3. Download CUDA and cuDNN packages
-In this case, CUDA version is 9.0 and cuDNN is 7.4.2, check the following websites, in this tutorial, the CUDA file is downloaded as cuda_9.0.176_384.81_linux.run and cuDNN is cudnn-9.0-linux-x64-v7.3.1.20.solitairetheme8 from the browser, you can also use `wget` if possible. By default, both files are downloaded to ``~/Download`` folder
+In this case, CUDA version is 9.0 and cuDNN is 7.4.2, check the following websites, 
 https://developer.nvidia.com/cuda-toolkit-archive
 
-(NVIDIA account needed) https://developer.nvidia.com/cudnn 
+(NVIDIA account needed) https://developer.nvidia.com/cudnn, select cuDNN v7.4.2 Library for Linux which is actually a .tgz file. 
+
+In this tutorial, the CUDA file is downloaded as cuda_9.0.176_384.81_linux.run and cuDNN is cudnn-9.0-linux-x64-v7.3.1.20.solitairetheme8 from the browser, you can also use `wget` if possible. By default, both files are downloaded to ``~/Download`` folder.
 
 ## 4. Install CUDA
 In a normal terminal or hard terminal:
@@ -154,7 +156,7 @@ Activate the enviroment and install tensorflow from pip
 conda activate conda_tf
 pip install tensorflow-gpu==1.12.0
 ```
-Enter pytho and test
+Enter python and test
 ```
 python
 # python commands   

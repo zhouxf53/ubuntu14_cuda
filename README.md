@@ -66,6 +66,7 @@ Check gcc version agian, reboot, and attempt to log in to GUI.
 
 ## 3. Download CUDA and cuDNN packages
 In this case, CUDA version is 9.0 and cuDNN is 7.4.2, check the following websites, 
+
 https://developer.nvidia.com/cuda-toolkit-archive
 
 (NVIDIA account needed) https://developer.nvidia.com/cudnn, select cuDNN v7.4.2 Library for Linux which is actually a .tgz file. 

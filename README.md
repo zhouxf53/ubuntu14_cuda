@@ -1,5 +1,5 @@
 # Summary 
-Install CUDA 9.0, tensorflow-gpu 1.12.0, Anaconda 2018.12, and Pycharm on a Ubuntu 14.04 station
+Install CUDA 9.0, tensorflow-gpu 1.12.0, Anaconda 2018.12, and Pycharm on a Ubuntu 14.04 machine
 
 # Installation steps
 ## Re-image the station with Ubuntu 14.04
@@ -140,7 +140,7 @@ echo $LD_LIBRARY_PATH
 ## 8. Download Anaconda from the official website
 https://www.anaconda.com/distribution/
 
-## 9. Install Anaconda and create new enviroment
+## 9. Install Anaconda and create new environment
 Install anaconda, press s to skip terms, d to fast forward. All options yes.
 ```
 cd ~/Download
